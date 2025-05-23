@@ -25,7 +25,7 @@
 
 
 ## 💡 Introduction
-We introduce VeriThinker, a novel approach for CoT compression. Unlike conventional methods that fine-tune LRMs directly on the original reasoning task using synthetic concise CoT data, we innovatively fine-tune the model solely through an auxiliary verification task. By training LRMs to accurately verify the correctness of CoT solutions, the LRMs inherently become more discerning about the necessity of subsequent self-reflection steps, thereby effectively suppressing overthinking. Extensive experiments validate that VeriThinker substantially reduces reasoning chain lengths while maintaining or even slightly improving accuracy. Additionally, our experiments demonstrate that VeriThinker can also be zero-shot generalized to speculative reasoning to boost throughput.
+We introduce VeriThinker, a novel approach for CoT compression. Unlike conventional methods that fine-tune LRMs directly on the original reasoning task using synthetic concise CoT data, we innovatively fine-tune the model solely through an auxiliary verification task. By training LRMs to accurately verify the correctness of CoT solutions, the LRMs inherently become more discerning about the necessity of subsequent self-reflection steps, thereby effectively suppressing overthinking. Extensive experiments validate that VeriThinker substantially reduces reasoning chain lengths while maintaining or even slightly improving accuracy. When applied to DeepSeek-R1-Distill-Qwen-7B, our approach reduces reasoning tokens on MATH500 from 3790 to 2125 while improving accuracy by 0.8% (94.0% to 94.8%), and on AIME25, tokens decrease from 14321 to 10287 with a 2.1% accuracy gain (38.7% to 40.8%). Additionally, our experiments demonstrate that VeriThinker can also be zero-shot generalized to speculative reasoning to boost throughput.
 
 <!-- ![figure](assets/intro.png) -->
 <div align="center">
@@ -62,7 +62,7 @@ CoT-Veirification-340k</a></td>
 </table>
 
 ## 🔥Updates
-* 🔥 **May 27, 2024**: Our paper is available
+* 🔥 **May 27, 2024**: Our arxiv paper is available
 * 🔥 **May 27, 2024**:  Code, model and dataset are released
 
 ## 🔧  Installation:
@@ -225,3 +225,9 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_aime25.py
 Speculative reasoning results on three reasoning models. When using Qwen-2.5-Math-Instruct-7B as the draft model, most problems in MATH500 and GSM8K can be solved with short CoT model, while only a few (around 10%) require activation of the long CoT model for more complex solutions.
 ![CoT Speculative1](assets/cot-spec1.png)
 ![CoT Speculative2](assets/cot-spec2.png)
+
+## Citation
+If our research assists your work, please give us a star ⭐ or cite us using:
+```
+
+```
