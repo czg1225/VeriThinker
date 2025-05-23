@@ -1,6 +1,6 @@
 
 
-<div align="left">
+<div align="center">
 <h1>🔍 VeriThinker: Learning to Verify Makes Reasoning Model Efficient</h1>
 
   <div align="center">
