@@ -1,7 +1,7 @@
 
 
-<div align="center">
-<h1>🔍 VeriThinker</h1>
+<div align="left">
+<h1>🔍 VeriThinker: Learning to Verify Makes Reasoning Model Efficient</h1>
 
   <div align="center">
   <a href="https://opensource.org/license/mit-0">
