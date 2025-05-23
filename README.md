@@ -39,7 +39,7 @@ We introduce VeriThinker, a novel approach for CoT compression. Unlike conventio
 
 
 
-## Model and Datasets
+## 💻 Model and Datasets
 <table>
 <table>
   <thead>
@@ -74,7 +74,7 @@ pip3 install -r requirements.txt
 ```
 
 ## 🚀 Quick Start:
-### Reasoning Task
+### Reasoning Task:
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -118,7 +118,7 @@ response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
 print(response)
 ```
-### Correctness Veirification Task
+### Correctness Veirification Task:
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -185,7 +185,7 @@ response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 print(response)
 ```
 
-## Training
+## 🔥 Training
 ### 1. Training with LoRA:
 We provide training scripts for our proposed supervised verification fine-tuning approach. The implementation utilizes LoRA during the training process, with the configuration details specified in [config_lora_r1_7b.yaml](https://github.com/czg1225/VeriThinker/blob/main/config/config_lora_r1_7b.yaml).
 ```bash
@@ -198,23 +198,23 @@ After training, merge the LoRA weights to get the reasoning model.
 python merge_lora.py
 ```
 
-## Evaluation:
+## ⚡ Evaluation:
 We provide evaluation scripts for three mathematical datasets: MATH500, AIME 2024, and AIME 2025. Our implementation leverages the [vLLM](https://docs.vllm.ai/en/latest/) framework to ensure efficient inference during evaluation.
 
-### Evaluation on MATH500 Dataset
+### 1. Evaluation on MATH500 Dataset
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_math500.py
 ```
-### Evaluation on AIME 2024 Dataset
+### 2. Evaluation on AIME 2024 Dataset
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_aime24.py
 ```
-### Evaluation on AIME 2025 Dataset
+### 3. Evaluation on AIME 2025 Dataset
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_aime25.py
 ```
 
-## Experimental Results
+## Experimental Results 📖
 ### CoT Compression Results
 ![CoT Compression](assets/cot-compression.png)
 
