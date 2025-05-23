@@ -1,4 +1,4 @@
-from dataset_math import extract_all_boxed_content
+from dataset import extract_all_boxed_content
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import json
 import time
@@ -9,13 +9,15 @@ import re
 from math_verify import parse, verify
 from math_verify.parser import LatexExtractionConfig, ExprExtractionConfig
 
+
 def main():
     test_examples = load_dataset("HuggingFaceH4/MATH-500",split="test")
     test_examples = list(test_examples)*1
 
     seed = 42
     
-    model_name = "model/R1_VeriThinker_Qwen_7B"
+    model_name = "Zigeng/R1-VeriThinker-7B"
+
     llm = LLM(model=model_name,tensor_parallel_size=4, max_model_len=40000)
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -118,7 +120,6 @@ def main():
                         accept = False
             else:
                 accept = False
-######################################################################
 
             if prediction is None:
                 prediction = extract_answer_llm(response)

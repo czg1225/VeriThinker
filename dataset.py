@@ -89,6 +89,40 @@ def extract_answer_llm(text):
     
     return cleaned_number
 
+def extract_all_boxed_content(text):
+    results = []
+    start = 0
+
+    while True:
+        # Find the next occurrence of \boxed{
+        start = text.find(r"\boxed{", start)
+        if start == -1:
+            break  # No more \boxed{ found
+
+        brace_count = 0
+        result = []
+        i = start
+
+        while i < len(text):
+            char = text[i]
+            result.append(char)
+
+            if char == '{':
+                brace_count += 1
+            elif char == '}':
+                brace_count -= 1
+
+            # Stop when the braces are balanced
+            if brace_count == 0 and result[-1] == '}':
+                break
+
+            i += 1
+
+        # Append the matched content
+        results.append(''.join(result))
+        start = i + 1  # Move past the current match to find the next
+
+    return results
 
 def is_correct(model_completion, gt_example):
     gt_answer = extract_answer_gt(gt_example["answer"])

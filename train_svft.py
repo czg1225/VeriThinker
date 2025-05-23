@@ -121,7 +121,7 @@ def main():
     model, tokenizer = prepare_model(config)
 
     # 3. Load the original dataset
-    dataset = load_dataset("HuggingFaceH4/MATH-500",split="train")
+    dataset = load_dataset("Zigeng/CoT-Verification-340k",split="train")
 
 
     # 4. Format each sample, generate the complete text and record the number of tokens in the prompt section

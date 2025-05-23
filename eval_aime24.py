@@ -15,7 +15,7 @@ def main():
 
     seed=42
 
-    model_name = "model/R1_VeriThinker_Qwen_7B"
+    model_name = "Zigeng/R1-VeriThinker-7B"
 
     llm = LLM(model=model_name,tensor_parallel_size=4, max_model_len=40000)
 
@@ -71,8 +71,6 @@ def main():
             num_new_tokens = len(tokenizer.encode(response))
             
             gt_answer = batch_gt_answers[j]
-
-######################################################################
 
             llm_answer = extract_answer_qwq(response)
             if is_float(llm_answer):
