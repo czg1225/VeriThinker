@@ -47,7 +47,7 @@ We introduce VeriThinker, a novel approach for CoT compression. Unlike conventio
   <tbody>
     <tr>
       <td>📄 <strong>Paper</strong></td>
-      <td><a href="http://arxiv.org/abs/2505.13379">ArXiv-Link</a></td>
+      <td><a href="https://github.com/czg1225/VeriThinker">ArXiv-Link</a></td>
     </tr>
     <tr>
       <td>🤖 <strong>Model</strong></td>
@@ -62,8 +62,8 @@ CoT-Veirification-340k</a></td>
 </table>
 
 ## 🔥Updates
-* 🔥 **May 27, 2024**: Our arxiv paper is available
-* 🔥 **May 27, 2024**:  Code, model and dataset are released
+* 🔥 **May 27, 2025**: Our arxiv paper will available
+* 🔥 **May 27, 2025**: Code, model and dataset are released
 
 ## 🔧  Installation:
 
