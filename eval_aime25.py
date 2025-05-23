@@ -43,7 +43,6 @@ def main():
 
             #deepseek r1
             tail = r" Please reason step by step, and put your final answer within \boxed{}."
-
             messages = [
             {"role": "user", "content": prompt + tail}
             ]
