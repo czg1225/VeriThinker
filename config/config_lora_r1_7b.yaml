@@ -1,0 +1,35 @@
+# config.yaml
+model:
+  name: "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+  trust_remote_code: true
+  torch_dtype: "bfloat16"
+
+training:
+  output_dir: "model/R1_VeriThinker_7B_lora"
+  num_train_epochs: 2
+  gradient_accumulation_steps: 8
+  per_device_train_batch_size: 1
+  logging_steps: 10
+  learning_rate: 0.00003
+  weight_decay: 0.01
+  bf16: True
+  optim: "adamw_torch"
+  warmup_ratio: 0.05
+  max_grad_norm: 1
+  group_by_length: true
+  lr_scheduler_type: "cosine"
+  save_strategy: "epoch"
+  per_device_eval_batch_size: 1
+
+lora:
+  r: 256
+  lora_alpha: 512
+  target_modules: 
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
