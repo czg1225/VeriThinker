@@ -186,19 +186,20 @@ print(response)
 ```
 
 ## Training
-
 ### 1. Training with LoRA:
-We provide training scripts for our proposed supervised veirfication finetuning. We employ lora in our training process. The training config is in 
+We provide training scripts for our proposed supervised verification fine-tuning approach. The implementation utilizes LoRA during the training process, with the configuration details specified in [config_lora_r1_7b.yaml](https://github.com/czg1225/VeriThinker/blob/main/config/config_lora_r1_7b.yaml).
 ```bash
 deepspeed --include localhost:0,1,2,3,4,5,6,7 train_svft.py
 ```
 
 ### 2. LoRA Merge:
+After training, merge the LoRA weights to get the reasoning model.
 ```bash
 python merge_lora.py
 ```
 
 ## Evaluation:
+We provide evaluation scripts for three mathematical datasets: MATH500, AIME 2024, and AIME 2025. Our implementation leverages the [vLLM](https://docs.vllm.ai/en/latest/) framework to ensure efficient inference during evaluation.
 
 ### Evaluation on MATH500 Dataset
 ```bash
@@ -212,3 +213,15 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_aime24.py
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_aime25.py
 ```
+
+## Experimental Results
+### CoT Compression Results
+![CoT Compression](assets/cot-compression.png)
+
+### CoT Correctness Verification Results.
+![CoT Correctness](assets/cot-correctness.png)
+
+### Speculative Reasoning Results.
+Speculative reasoning results on three reasoning models. When using Qwen-2.5-Math-Instruct-7B as the draft model, most problems in MATH500 and GSM8K can be solved with short CoT model, while only a few (around 10%) require activation of the long CoT model for more complex solutions.
+![CoT Speculative1](assets/cot-spec1.png)
+![CoT Speculative2](assets/cot-spec2.png)
