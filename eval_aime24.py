@@ -25,7 +25,6 @@ def main():
     tokens = 0
     answers = []
     
-    start_time = time.time()
     
     # Define batch size
     batch_size = 30
@@ -103,24 +102,20 @@ def main():
             
             # Print progress for each example
             current_idx = i + j + 1
-            print("sample num:", current_idx, "result:", accept, "right ratio:", right/current_idx)
+            print("sample num:", current_idx, "result:", accept, "accuracy:", right/current_idx)
             print("gt_answer:", gt_answer, "llm_answer:", llm_answer)
             print('tokens:', num_new_tokens)
             print('-' * 50)
         
     
-    end_time = time.time()
-    
     # Calculate final metrics
     avg_tokens = tokens / len(test_examples)
     ratio = right / len(test_examples)
-    latency = (end_time - start_time) / len(test_examples)
     
-    print("#############################################MATH500 CD DRAFT#############################################")
+    print("#############################################AIME2024#############################################")
     print("num of samples:", len(test_examples))
     print("avg tokens:", avg_tokens)
     print("avg accuracy:", ratio)
-    print("avg latency:", latency)
     
     # Save wrong answers to JSON
     with open("test_aime24.json", "w", encoding="utf-8") as f:

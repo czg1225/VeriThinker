@@ -1,5 +1,3 @@
-
-import yaml
 from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
@@ -8,7 +6,6 @@ from transformers import (
 from peft import (
     PeftModel,
 )
-from typing import Dict, Any
 
 
 def main():
@@ -26,7 +23,7 @@ def main():
         name,
     )
     # Loading LoRA weights
-    peft_model = PeftModel.from_pretrained(base_model, "model/R1_VeriThinker_7B_lora")
+    peft_model = PeftModel.from_pretrained(base_model, "<lora-checkpoints>")
 
     # lora merging
     merged_model = peft_model.merge_and_unload()
