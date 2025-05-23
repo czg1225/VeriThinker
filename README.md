@@ -214,14 +214,14 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_aime24.py
 CUDA_VISIBLE_DEVICES=0,1,2,3 python eval_aime25.py
 ```
 
-## Experimental Results 📖
-### CoT Compression Results
+## 📖 Experimental Results
+### CoT Compression Results:
 ![CoT Compression](assets/cot-compression.png)
 
-### CoT Correctness Verification Results.
+### CoT Correctness Verification Results:
 ![CoT Correctness](assets/cot-correctness.png)
 
-### Speculative Reasoning Results.
+### Speculative Reasoning Results:
 Speculative reasoning results on three reasoning models. When using Qwen-2.5-Math-Instruct-7B as the draft model, most problems in MATH500 and GSM8K can be solved with short CoT model, while only a few (around 10%) require activation of the long CoT model for more complex solutions.
 ![CoT Speculative1](assets/cot-spec1.png)
 ![CoT Speculative2](assets/cot-spec2.png)
