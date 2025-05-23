@@ -119,7 +119,7 @@ def main():
     print("#############################################MATH500 CD DRAFT#############################################")
     print("num of samples:", len(test_examples))
     print("avg tokens:", avg_tokens)
-    print("avg ratio:", ratio)
+    print("avg accuracy:", ratio)
     print("avg latency:", latency)
     
     # Save wrong answers to JSON
