@@ -23,6 +23,21 @@
 > [Zigeng Chen](https://github.com/czg1225), [Xinyin Ma](https://horseee.github.io/), [Gongfan Fang](https://fangggf.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)   
 > [xML Lab](https://sites.google.com/view/xml-nus), National University of Singapore  
 
+
+<!-- ![figure](assets/intro.png) -->
+<div align="center">
+  <img src="assets/teaser.png" width="100%" ></img>
+  <br>
+  <em>
+      The key distinction between VeriThinker and traditional SFT or RL-based long-to-short methods. We uniquely train LRMs on an auxiliary CoT verification task, achieving effective CoT compression without relying on synthetic target reasoning chains.
+  </em>
+</div>
+<br>
+
+## 💡 Introduction
+We introduce VeriThinker, a novel approach for CoT compression. Unlike conventional methods that fine-tune LRMs directly on the original reasoning task using synthetic concise CoT data, we innovatively fine-tune the model solely through an auxiliary verification task. By training LRMs to accurately verify the correctness of CoT solutions, the LRMs inherently become more discerning about the necessity of subsequent self-reflection steps, thereby effectively suppressing overthinking. Extensive experiments validate that VeriThinker substantially reduces reasoning chain lengths while maintaining or even slightly improving accuracy. Additionally, our experiments demonstrate that VeriThinker can also be zero-shot generalized to speculative reasoning to boost throughput.
+
+## Model and Datasets
 <table>
 <table>
   <thead>
@@ -43,19 +58,6 @@ CoT-Veirification-340k</a></td>
     </tr>
   </tbody>
 </table>
-
-<!-- ![figure](assets/intro.png) -->
-<div align="center">
-  <img src="assets/teaser.png" width="100%" ></img>
-  <br>
-  <em>
-      The key distinction between VeriThinker and traditional SFT or RL-based long-to-short methods. We uniquely train LRMs on an auxiliary CoT verification task, achieving effective CoT compression without relying on synthetic target reasoning chains.
-  </em>
-</div>
-<br>
-
-## 💡 Introduction
-We introduce VeriThinker, a novel approach for CoT compression. Unlike conventional methods that fine-tune LRMs directly on the original reasoning task using synthetic concise CoT data, we innovatively fine-tune the model solely through an auxiliary verification task. By training LRMs to accurately verify the correctness of CoT solutions, the LRMs inherently become more discerning about the necessity of subsequent self-reflection steps, thereby effectively suppressing overthinking. Extensive experiments validate that VeriThinker substantially reduces reasoning chain lengths while maintaining or even slightly improving accuracy. Additionally, our experiments demonstrate that VeriThinker can also be zero-shot generalized to speculative reasoning to boost throughput.
 
 ## 🔥Updates
 * 🔥 **May 27, 2024**: Our paper is available
