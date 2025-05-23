@@ -1,6 +1,5 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import json
-import time
 from datasets import load_dataset
 from dataset import extract_answer_llm
 from vllm import LLM, SamplingParams
@@ -11,7 +10,7 @@ def main():
 
     test_examples = load_dataset("Maxwell-Jia/AIME_2024", split="train")
     test_examples = list(test_examples)
-    test_examples = test_examples*10
+    test_examples = test_examples*8
 
     seed=42
 

@@ -1,7 +1,6 @@
 from dataset import extract_all_boxed_content
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import json
-import time
 from datasets import load_dataset
 from dataset import extract_answer_llm
 from vllm import LLM, SamplingParams
