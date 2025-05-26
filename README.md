@@ -7,7 +7,7 @@
   <a href="https://opensource.org/license/mit-0">
     <img alt="MIT" src="https://img.shields.io/badge/License-MIT-4E94CE.svg">
   </a>
-  <a href="https://github.com/czg1225/VeriThinker">
+  <a href="https://arxiv.org/pdf/2505.17941">
     <img src="https://img.shields.io/badge/Paper-Arxiv-darkred.svg" alt="Paper">
   </a>
   <a href="https://huggingface.co/Zigeng/R1-VeriThinker-7B">
@@ -47,7 +47,7 @@ We introduce VeriThinker, a novel approach for CoT compression. Unlike conventio
   <tbody>
     <tr>
       <td>📄 <strong>Paper</strong></td>
-      <td><a href="https://github.com/czg1225/VeriThinker">ArXiv-Link</a></td>
+      <td><a href="https://arxiv.org/pdf/2505.17941">ArXiv-Link</a></td>
     </tr>
     <tr>
       <td>🤖 <strong>Model</strong></td>
