@@ -229,5 +229,10 @@ Speculative reasoning results on three reasoning models. When using Qwen-2.5-Mat
 ## Citation
 If our research assists your work, please give us a star ⭐ or cite us using:
 ```
-
+@article{chen2025verithinker,
+  title={VeriThinker: Learning to Verify Makes Reasoning Model Efficient},
+  author={Chen, Zigeng and Ma, Xinyin and Fang, Gongfan and Yu, Ruonan and Wang, Xinchao},
+  journal={arXiv preprint arXiv:2505.17941},
+  year={2025}
+}
 ```
