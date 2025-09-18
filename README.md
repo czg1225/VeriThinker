@@ -62,6 +62,7 @@ CoT-Veirification-340k</a></td>
 </table>
 
 ## 🔥Updates
+* 🎉 **[May 26, 2025]**: Our paper is accept by **NeurIPS 2025**.
 * 🔥 **[May 26, 2025]**: Our paper is available now.
 * 🔥 **[May 23, 2025]**: Our arxiv paper will be available soon!
 * 🔥 **[May 23, 2025]**: Code, model and dataset are released
