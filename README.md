@@ -234,7 +234,7 @@ If our research assists your work, please give us a star ⭐ or cite us using:
 @article{chen2025verithinker,
   title={VeriThinker: Learning to Verify Makes Reasoning Model Efficient},
   author={Chen, Zigeng and Ma, Xinyin and Fang, Gongfan and Yu, Ruonan and Wang, Xinchao},
-  journal={arXiv preprint arXiv:2505.17941},
+  journal={Advances in Neural Information Processing Systems},
   year={2025}
 }
 ```
